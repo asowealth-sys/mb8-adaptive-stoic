@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: mb8-adaptive-stoic-api
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
