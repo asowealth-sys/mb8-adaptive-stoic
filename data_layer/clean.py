@@ -4,8 +4,8 @@ import re
 
 import pandas as pd
 
-from mb8_adaptive_stoic.app.config import SETTINGS
-from mb8_adaptive_stoic.data_layer.normalize_odds import normalize_odds
+from app.config import SETTINGS
+from data_layer.normalize_odds import normalize_odds
 
 
 SRL_PATTERN = re.compile(r"\b(srl|simulation|simulated reality|virtual)\b", re.IGNORECASE)

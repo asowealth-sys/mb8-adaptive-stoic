@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from mb8_adaptive_stoic.data_layer.clean import clean_dataset
-from mb8_adaptive_stoic.rules_engine.stoic_pipeline import run_stoic_pipeline
+from data_layer.clean import clean_dataset
+from rules_engine.stoic_pipeline import run_stoic_pipeline
 
 
 def test_duplicate_matches_are_removed(frame, valid_row):

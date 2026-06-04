@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import HTTPException, Security, status
 from fastapi.security import APIKeyHeader
 
-from mb8_adaptive_stoic.app.production_config import PRODUCTION_SETTINGS
+from app.production_config import PRODUCTION_SETTINGS
 
 API_KEY_HEADER = "X-MB8-API-Key"
 api_key_header = APIKeyHeader(name=API_KEY_HEADER, auto_error=False)

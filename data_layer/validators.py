@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pandas as pd
 
-from mb8_adaptive_stoic.app.config import SETTINGS
+from app.config import SETTINGS
 
 
 def missing_required_columns(df: pd.DataFrame) -> list[str]:

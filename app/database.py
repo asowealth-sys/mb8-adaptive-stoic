@@ -8,7 +8,7 @@ import sqlite3
 from pathlib import Path
 from typing import Any
 
-DB_PATH = Path(os.getenv("MB8_DB_PATH", str(Path(__file__).resolve().parents[1] / "mb8_adaptive_stoic.sqlite3")))
+DB_PATH = Path(os.getenv("MB8_DB_PATH", str(Path(__file__).resolve().parents[1] / "mb8_history.sqlite3")))
 
 
 def get_connection() -> sqlite3.Connection:

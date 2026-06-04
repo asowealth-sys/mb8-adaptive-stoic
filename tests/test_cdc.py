@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from mb8_adaptive_stoic.execution_engine.cdc import apply_cdc_control
-from mb8_adaptive_stoic.rules_engine.stoic_pipeline import run_stoic_pipeline
+from execution_engine.cdc import apply_cdc_control
+from rules_engine.stoic_pipeline import run_stoic_pipeline
 
 
 def test_high_cdc_risk_blocks_final_slip():

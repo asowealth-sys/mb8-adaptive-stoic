@@ -5,10 +5,10 @@ import json
 import pandas as pd
 import streamlit as st
 
-from mb8_adaptive_stoic.app.database import get_run_history, init_db, list_run_history
-from mb8_adaptive_stoic.app.services import run_mb8_application
-from mb8_adaptive_stoic.data_layer.ingest import read_dataset
-from mb8_adaptive_stoic.interface.reports import (
+from app.database import get_run_history, init_db, list_run_history
+from app.services import run_mb8_application
+from data_layer.ingest import read_dataset
+from interface.reports import (
     audit_to_json_bytes,
     combined_report_csv_bytes,
     pdf_report_bytes,

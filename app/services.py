@@ -4,8 +4,8 @@ from uuid import uuid4
 
 import pandas as pd
 
-from mb8_adaptive_stoic.app.database import init_db, save_run_history
-from mb8_adaptive_stoic.rules_engine.stoic_pipeline import run_stoic_pipeline
+from app.database import init_db, save_run_history
+from rules_engine.stoic_pipeline import run_stoic_pipeline
 
 
 def run_mb8_application(df: pd.DataFrame, source_filename: str) -> dict[str, object]:

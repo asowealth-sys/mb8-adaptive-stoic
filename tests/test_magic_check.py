@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from mb8_adaptive_stoic.rules_engine.magic_check import magic_check
-from mb8_adaptive_stoic.rules_engine.rejection_logic import new_audit_trail
-from mb8_adaptive_stoic.rules_engine.stoic_pipeline import run_stoic_pipeline
+from rules_engine.magic_check import magic_check
+from rules_engine.rejection_logic import new_audit_trail
+from rules_engine.stoic_pipeline import run_stoic_pipeline
 
 
 def test_magic_check_cannot_be_bypassed_without_full_pipeline():

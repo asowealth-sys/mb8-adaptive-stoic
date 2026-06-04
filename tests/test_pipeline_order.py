@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from mb8_adaptive_stoic.rules_engine.stoic_pipeline import get_pipeline_order
+from rules_engine.stoic_pipeline import get_pipeline_order
 
 
 def test_pipeline_order_cannot_be_changed():

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from mb8_adaptive_stoic.rules_engine.stoic_pipeline import run_stoic_pipeline
+from rules_engine.stoic_pipeline import run_stoic_pipeline
 
 
 def test_every_rejected_pick_has_rejection_reason(frame, valid_row):

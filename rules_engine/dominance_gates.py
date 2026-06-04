@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from mb8_adaptive_stoic.app.config import SETTINGS
+from app.config import SETTINGS
 
 
 def dominance_gate(score: float) -> tuple[bool, str]:

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from uuid import uuid4
 
-from mb8_adaptive_stoic.schemas.audit_schema import AuditTrail
+from schemas.audit_schema import AuditTrail
 
 
 def new_audit_trail() -> AuditTrail:

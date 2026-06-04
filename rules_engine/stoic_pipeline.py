@@ -4,28 +4,28 @@ import json
 
 import pandas as pd
 
-from mb8_adaptive_stoic.app.config import SETTINGS
-from mb8_adaptive_stoic.app.database import init_db, save_audit_log
-from mb8_adaptive_stoic.data_layer.clean import clean_dataset
-from mb8_adaptive_stoic.data_layer.validators import missing_required_columns
-from mb8_adaptive_stoic.execution_engine.behavioral_ai import behavioral_flags
-from mb8_adaptive_stoic.execution_engine.cdc import apply_cdc_control, item_cdc_score
-from mb8_adaptive_stoic.execution_engine.dominance_stability import dominance_score
-from mb8_adaptive_stoic.execution_engine.ecosystem_engine import classify_ecosystem
-from mb8_adaptive_stoic.execution_engine.feature_engineering import profile_match
-from mb8_adaptive_stoic.execution_engine.final_engine import final_slip_row, rejected_row
-from mb8_adaptive_stoic.execution_engine.market_selection import select_market
-from mb8_adaptive_stoic.execution_engine.mvss import mvss_rating
-from mb8_adaptive_stoic.execution_engine.pgce_risk import pgce_score
-from mb8_adaptive_stoic.execution_engine.stoic_slip_scorer import slip_label, stoic_score, survivability_rating
-from mb8_adaptive_stoic.rules_engine.behavioral_filters import behavioral_filter
-from mb8_adaptive_stoic.rules_engine.dominance_gates import dominance_gate
-from mb8_adaptive_stoic.rules_engine.double_chance_gate import double_chance_integrity_gate
-from mb8_adaptive_stoic.rules_engine.ecosystem_rules import ecosystem_rule
-from mb8_adaptive_stoic.rules_engine.magic_check import magic_check
-from mb8_adaptive_stoic.rules_engine.rejection_logic import new_audit_trail, reject_candidate
-from mb8_adaptive_stoic.rules_engine.yes_no_protocol import yes_no_protocol
-from mb8_adaptive_stoic.schemas.result_schema import EngineResult
+from app.config import SETTINGS
+from app.database import init_db, save_audit_log
+from data_layer.clean import clean_dataset
+from data_layer.validators import missing_required_columns
+from execution_engine.behavioral_ai import behavioral_flags
+from execution_engine.cdc import apply_cdc_control, item_cdc_score
+from execution_engine.dominance_stability import dominance_score
+from execution_engine.ecosystem_engine import classify_ecosystem
+from execution_engine.feature_engineering import profile_match
+from execution_engine.final_engine import final_slip_row, rejected_row
+from execution_engine.market_selection import select_market
+from execution_engine.mvss import mvss_rating
+from execution_engine.pgce_risk import pgce_score
+from execution_engine.stoic_slip_scorer import slip_label, stoic_score, survivability_rating
+from rules_engine.behavioral_filters import behavioral_filter
+from rules_engine.dominance_gates import dominance_gate
+from rules_engine.double_chance_gate import double_chance_integrity_gate
+from rules_engine.ecosystem_rules import ecosystem_rule
+from rules_engine.magic_check import magic_check
+from rules_engine.rejection_logic import new_audit_trail, reject_candidate
+from rules_engine.yes_no_protocol import yes_no_protocol
+from schemas.result_schema import EngineResult
 
 
 PIPELINE_ORDER = (

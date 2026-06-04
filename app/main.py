@@ -9,14 +9,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 from pydantic import BaseModel, Field
 
-from mb8_adaptive_stoic.app.auth import require_api_key
-from mb8_adaptive_stoic.app.custom_gpt_actions import custom_gpt_openapi_schema
-from mb8_adaptive_stoic.app.database import get_run_history, init_db, list_run_history
-from mb8_adaptive_stoic.app.production_config import PRODUCTION_SETTINGS
-from mb8_adaptive_stoic.app.services import run_mb8_application
-from mb8_adaptive_stoic.data_layer.ingest import read_dataset
-from mb8_adaptive_stoic.interface.reports import combined_report_csv_bytes, pdf_report_bytes
-from mb8_adaptive_stoic.rules_engine.stoic_pipeline import get_pipeline_order, run_stoic_pipeline
+from app.auth import require_api_key
+from app.custom_gpt_actions import custom_gpt_openapi_schema
+from app.database import get_run_history, init_db, list_run_history
+from app.production_config import PRODUCTION_SETTINGS
+from app.services import run_mb8_application
+from data_layer.ingest import read_dataset
+from interface.reports import combined_report_csv_bytes, pdf_report_bytes
+from rules_engine.stoic_pipeline import get_pipeline_order, run_stoic_pipeline
 
 
 class MB8JsonRunRequest(BaseModel):
